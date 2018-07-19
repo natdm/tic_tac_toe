@@ -24,10 +24,10 @@ Set up the server by sending the Firebase configuration to POST /init
   * Sets up the database. No moves are updated to users until then, though moves can be placed (buggy).
 * GET /clear
   * Clears the game and board
-* POST /move
+* POST /player/move
   * takes a move request with a body of `{"player_id": string, "x_axis": number, "y_axis": number}`
-* PUT /player
+* PUT /player/update
   * updates a player. Must have an ID that is already registered. Takes a body of `{"id": string, "name": string}`
-* POST /subscribe
+* POST /player/subscribe
   * subscribes a user to a game. Takes a POST request of `{"id": string, "name": string}`
-* POST /unsubscribe takes a request of `{"id": string, "name": string}` to unsubscribe to games to
+* POST /player/unsubscribe takes a request of `{"id": string, "name": string}` to unsubscribe to games to
